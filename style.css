@@ -12,7 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px; /* biar ada ruang saat layar kecil */
 }
 
 /* Kartu profil */
@@ -22,7 +23,8 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     text-align: center;
-    width: 320px;
+    width: 100%;
+    max-width: 360px; /* batas maksimal di laptop */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -66,6 +68,7 @@ body {
     color: #0077ff;
     font-weight: 500;
     transition: color 0.3s;
+    word-break: break-word; /* biar link panjang tetap rapi */
 }
 
 .kartu-profil a:hover {
@@ -93,4 +96,50 @@ body {
 
 .kartu-profil button:active {
     transform: scale(0.97);
+}
+
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+   ========================= */
+
+/* Tablet (max 768px) */
+@media (max-width: 768px) {
+    .kartu-profil {
+        padding: 25px 20px;
+        max-width: 90%;
+    }
+
+    .kartu-profil h1 {
+        font-size: 18px;
+    }
+
+    .kartu-profil p {
+        font-size: 13px;
+    }
+}
+
+/* HP kecil (max 480px) */
+@media (max-width: 480px) {
+    .kartu-profil {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .kartu-profil img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .kartu-profil h1 {
+        font-size: 16px;
+    }
+
+    .kartu-profil p {
+        font-size: 12px;
+    }
+
+    .kartu-profil button {
+        font-size: 13px;
+        padding: 10px;
+    }
 }
