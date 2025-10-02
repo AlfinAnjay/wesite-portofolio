@@ -1,13 +1,96 @@
-body{
-    background-color: aquamarine;
-    font-family: arial, sans-serif;
-    color: brown;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.kartu-profil{
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+/* Body */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kartu profil */
+.kartu-profil {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu-profil:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Foto profil */
+.kartu-profil img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #e0e0e0;
+}
+
+/* Nama */
+.kartu-profil h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+/* Deskripsi */
+.kartu-profil p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/* Link Instagram */
+.kartu-profil a {
+    display: inline-block;
+    margin-bottom: 18px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0077ff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.kartu-profil a:hover {
+    color: #0055cc;
+}
+
+/* Tombol */
+.kartu-profil button {
+    background: #0077ff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.kartu-profil button:hover {
+    background: #005ed1;
+    transform: scale(1.03);
+}
+
+.kartu-profil button:active {
+    transform: scale(0.97);
 }
